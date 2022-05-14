@@ -53,8 +53,7 @@ class CharList extends Component {
         })
     }
 
-    // Этот метод создан для оптимизации, 
-    // чтобы не помещать такую конструкцию в метод render
+
     renderItems(arr) {
         const items =  arr.map((item) => {
             let imgStyle = {'objectFit' : 'cover'};
@@ -72,7 +71,7 @@ class CharList extends Component {
                 </li>
             )
         });
-        // А эта конструкция вынесена для центровки спиннера/ошибки
+
         return (
             <ul className="char__grid">
                 {items}
@@ -100,7 +99,7 @@ class CharList extends Component {
                     disabled={newItemLoading}
                     style={{'display' : charEnded ? 'none' : 'block'}}
                     onClick={() => this.onRequest(offset)}>
-                    <div className="inner">load more</div>
+                    <div className="inner">Load more</div>
                 </button>
             </div>
         )
